@@ -1,7 +1,7 @@
 //Calculadora de compras de proveedores con unidades y precios netos. Esta calculadora permite ingresar los datos de una compra hacia un proveedor siendo empresa y permitirá calcular el precio que le tengo que pagar al proveedor en (neto) y el impuesto que deberia pagar a impuestos internos por conceptos de IVA. En Chile es común pagar al proveedor en neto y vender con iva incluido para así restar el IVA Credito del iva Debito y bajar la carga tributaria.
 
 const calculadoraDeComprasProveedores = () => {
-
+alert("Bienvenido a Calculadora de compras de proveedores con unidades y precios netos. Esta calculadora permite ingresar los datos de una compra hacia un proveedor siendo empresa y permitirá calcular el precio que le tengo que pagar al proveedor en (neto) y el impuesto que deberia pagar a impuestos internos por conceptos de IVA. En Chile es común pagar al proveedor en neto y vender con iva incluido para así restar el IVA Credito del iva Debito y bajar la carga tributaria.")
     const reciboDePago = [];
 
         while (true) {
