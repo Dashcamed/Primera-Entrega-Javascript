@@ -48,32 +48,84 @@
 
 // version 2.0 aplicando arrays y estructura do while
 
-const acumuladorDeCompras = () => {
-    do{
-    seguirComprando = (true);
-    const compras = [
-        {producto: prompt('ingresa un producto'), precio: parseFloat(prompt('ingresa su precio neto')), cantidad: Number(prompt('ingresa la cantidad en kg o unidades. Para productos de menos de 1Kg agregar el valor en decimales ejemplo: 0.5kg'))}
-        ];
-        const nombresProductos = [];
-        compras.forEach((id) => {
-            nombresProductos.push(id.producto);
-        });
-        console.log(nombresProductos);
-        const preciosProductos = [];
-        compras.forEach((pre) => {
-            preciosProductos.push(pre.precio);
-        });
-        console.log(preciosProductos);
-        compras.forEach((elemento) => {
-            console.log(elemento.producto);
-            console.log('$' + elemento.precio + ' CLP');
-            console.log('cantidad: ' + elemento.cantidad);
-        const resultado = compras.find((compra) => compra.producto == 'pollo');
-        console.log(resultado);
-        const filtro = compras.filter ((compra) => compra.precio < 1000);
-        console.log(filtro);
-        });
-        compras.push();
-    } while (producto = confirm('¿desea ingresar otro producto?'));
-};
-acumuladorDeCompras();
+// const acumuladorDeCompras = () => {
+//     do{
+//     seguirComprando = (true);
+//     const compras = [
+//         {   producto: prompt('ingresa un producto'),
+
+//             precio: parseFloat(prompt('ingresa su precio neto')),
+
+//             cantidad: Number(prompt('ingresa la cantidad en kg o unidades. Para productos de menos de 1Kg agregar el valor en decimales ejemplo: 0.5kg'))}
+//         ];
+//         compras.push();
+//         const nombresProductos = [];
+//         compras.forEach((id) => {
+//             nombresProductos.push(id.producto);
+//         });
+//         console.log(nombresProductos);
+
+//         const preciosProductos = [];
+//         compras.forEach((pre) => {
+//             preciosProductos.push(pre.precio);
+//         });
+//         console.log(preciosProductos);
+
+//         compras.forEach((elemento) => {
+//             console.log(elemento.producto);
+//             console.log('$' + elemento.precio + ' CLP');
+//             console.log('cantidad: ' + elemento.cantidad);
+
+//         const resultado = compras.find((compra) => compra.producto == 'pollo');
+//         console.log(resultado);
+
+//         const filtro = compras.filter ((compra) => compra.precio < 1000);
+//         console.log(filtro);
+//         });
+//     } while (producto = confirm('¿desea ingresar otro producto?'));
+// };
+// acumuladorDeCompras();
+
+
+
+// calculadoras de chefs planner
+
+const unidades = (1);
+const peso = (360);
+const receta = [
+    {ingrediente: 'harina', porcentaje:100},
+    {ingrediente: 'sal', porcentaje:2},
+    {ingrediente: 'agua', porcentaje:60},
+    {ingrediente: 'masa madre', porcentaje:20},
+    {ingrediente: 'levadura', porcentaje:10},
+];
+
+const sumaPorcentaje = receta.reduce((acumulador, item) => acumulador + item.porcentaje, 0);
+console.log (sumaPorcentaje);
+
+const porcentajes = [];
+receta.forEach((numero) => {
+    porcentajes.push(numero.porcentaje);
+});
+
+console.log(porcentajes);
+
+const celda1 = porcentajes[0];
+const celda2 = porcentajes[1];
+const celda3 = porcentajes[2];
+const celda4 = porcentajes[3];
+const celda5 = porcentajes[4];
+
+const totalCelda1 = ((peso / sumaPorcentaje) * (celda1 * unidades));
+console.log(totalCelda1);
+const totalCelda2 = ((peso / sumaPorcentaje) * (celda2 * unidades));
+console.log(totalCelda2);
+const totalCelda3 = ((peso / sumaPorcentaje) * (celda3 * unidades));
+console.log(totalCelda3);
+const totalCelda4 = ((peso / sumaPorcentaje) * (celda4 * unidades));
+console.log(totalCelda4);
+const totalCelda5 = ((peso / sumaPorcentaje) * (celda5 * unidades));
+console.log(totalCelda5);
+
+const pesoTotalReceta = (totalCelda1 + totalCelda2 + totalCelda3 + totalCelda4 + totalCelda5);
+console.log(pesoTotalReceta);
